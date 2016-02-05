@@ -1,2 +1,3 @@
 # project-euler
-Solutions to the projecteuler.net problems
+
+Solutions to the projecteuler.net problems.
