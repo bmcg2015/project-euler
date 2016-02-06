@@ -1,0 +1,5 @@
+improve efficiency of the factorise() and isPrime() methods.
+is there a built-in java mehod to test for prime or to find
+prime factors?
+
+is ArrayList the most efficient data structure to use here?
