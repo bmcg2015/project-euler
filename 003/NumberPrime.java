@@ -1,6 +1,8 @@
-import java.util.ArrayList;
 /**
 * NumberPrime calculates the prime factors of a long var.
+* Problem description:
+* The prime factors of 13195 are 5, 7, 13 and 29.
+* What is the largest prime factor of the number 600851475143 ?
 * 
 * @author Brendan McGrath
 */
@@ -57,7 +59,7 @@ public class NumberPrime{
       else if( num % 2 == 0 )
          return false;
       else
-         for( long i = 3; i <= ( num / 3 ); i++ )
+         for( long i = 3; i*i <= num; i+=2 )
             if( num % i == 0 )
                return false;
       return true;
@@ -83,7 +85,6 @@ public class NumberPrime{
 
    System.out.println( --i );
    }
-
 
 
 }
