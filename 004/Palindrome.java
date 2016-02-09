@@ -30,8 +30,14 @@ public class Palindrome{
 
    }
 
+   /**
+   * Checks if the integer is a product of two 3-digit integers.
+   */
    public boolean isProduct( int num ){
-      //
+      for( int i = 999; i > 99; i-- )
+         if( num % i == 0  &&  ( num / ( 100 * i ) ) > 0  &&  ( num / ( 100 * i ) ) < 10 )
+            return true;
+      return false;
    }
 
 }
