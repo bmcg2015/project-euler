@@ -5,12 +5,23 @@
 *
 * Solution using prime factors.
 */
-
 public class Multiple2{
-   public ArrayList<Integer> primeFactors = new ArrayList<Integer>();
-   public final int[] primes = { 2, 3, 5, 7 };
 
+   /**
+   * A constant array containing all the prime integers less than
+   * or equal to 10.
+   */
+   public final int[] primes = { 2, 3, 5, 7, 11, 13, 17, 19 };
 
+   /**
+   * Stores the multiplicity of each of the prime numbers;
+   */
+   public int[] multiplicity = { 0, 0, 0, 0, 0, 0, 0, 0 };
+
+   /**
+   * Finds the lowest common multiple of all integers between
+   * 1 and 20 inclusive.
+   */
    public void smallestMultiple(){
       for( int i = 2; i <= 20; i++ )
          findPrimeFactors( i );
@@ -18,31 +29,38 @@ public class Multiple2{
    }//end of method smallestMultiple()
 
 
+   /**
+   * Find the prime factors of the argument.
+   * If the multiplicity of each factor is greater than for the 
+   * previous arguments, then use the larger number.
+   */
    public void findPrimeFactors( int num ){
-      ArrayList<Integer> numPrimeFactors = new ArrayList<Integer>();
+      int mult;
 
       //find the prime factors of the num argument:
-      for( int prime : primes ){
-         while( num % prime == 0 ){
-            num /= prime;
-            numPrimeFactors.add( num );
+      for( int i = 0; i < primes.length; i++ ){
+         mult = 0;
+         while( num % primes[i] == 0 ){
+            num /= primes[i];
+            mult++;
          }
+         if( mult > multiplicity[i] )
+            multiplicity[i] = mult;
       }
-
-      //compare the numPrimeFactors array with the primeFactors array:
-      
 
    }//end of method findPrimeFactors()
 
 
+   /**
+   * Returns the product of the prime factors, including the
+   * multiplicity of each.
+   */
    public void calculateProduct(){
       long product = 1;
-      for( int factor : primeFactors )
-         product *= factor;
+      for( int i = 0; i < primes.length; i++ )
+         for( int j = multiplicity[i]; j > 0; j-- )
+            product *= primes[i];
       System.out.println( product );
    }//end of method calculateProduct()
-
-
-
 
 }
