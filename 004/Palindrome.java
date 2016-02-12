@@ -1,15 +1,20 @@
 /**
-* Palindrome finds the largest palindrome from the product of two 3-digit numbers.
 * Problem description:
 * A palindromic number reads the same both ways.
 * The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 * Find the largest palindrome made from the product of two 3-digit numbers.
-*
-* @author Brendan McGrath
 */
 
+/**
+* Palindrome finds the largest palindrome from the product of two 3-digit numbers.
+* @author Brendan McGrath
+*/
 public class Palindrome{
 
+   /**
+   * Searches for palindromes and then checks if that number
+   * is a product of two 3-digit numbers.
+   */
    public int findLargestPalindrome(){
       int largest = 999 * 999;
 
@@ -28,7 +33,7 @@ public class Palindrome{
       }
       return 0;
 
-   }
+   }//end of method findLargestPalindrome()
 
    /**
    * Checks if the integer is a product of two 3-digit integers.
@@ -38,7 +43,7 @@ public class Palindrome{
          if( num % i == 0  &&  ( num / ( 100 * i ) ) > 0  &&  ( num / ( 100 * i ) ) < 10 )
             return true;
       return false;
-   }
+   }//end of method isProduct()
 
 }
 
