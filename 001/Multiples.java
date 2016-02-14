@@ -14,7 +14,8 @@
 public class Multiples{
 
    /**
-   * Sums the multiples of 3 and 5.
+   * Sums the multiples of 3 and 5 by looping through all integers less than 1000 and
+   * checking for modulus.
    */
    public void sumMultiples(){
       int sum = 0;
