@@ -36,6 +36,10 @@ public class Fibonacci{
    */
    public int sum = 0;
 
+   /**
+   * Sums the even valued terms in the Fibonacci sequence with a value less than or equal
+   * to 4 million.
+   */
    public void calculateSum(){
       
       while( term2 <= 4000000 ){
