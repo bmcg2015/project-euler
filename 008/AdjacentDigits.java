@@ -26,10 +26,6 @@
 * Find the thirteen adjacent digits in the 1000-digit number that have the greatest
 * product. What is the value of this product?
 * 
-* what is maximum of long var?
-* how many adjacent digits multiply to this? ie if all where 9.
-* use this as limit on setting numDigits. ie validation.
-*
 * make notes on PE:
 * convert from String to int.
 * convert from char to int.
@@ -45,6 +41,7 @@
 public class AdjacentDigits{
    /**
    * The number of adjacent digits for which to find the largest product.
+   * The valid range is 1 - 19 inclusive.
    */
    private int numDigits;
 
@@ -60,8 +57,6 @@ public class AdjacentDigits{
 
    /**
    * Default constructor.
-   */
-   public AdjacentDigits(){
       //
    }
 
@@ -70,7 +65,7 @@ public class AdjacentDigits{
    */
    public AdjacentDigits( String n, int nD ){
       this.number = n;
-      this.numDigits = nD;
+      setNumDigits( nD );
    }
 
    /**
@@ -91,16 +86,17 @@ public class AdjacentDigits{
 
    /**
    * Setter method for the numDigits var.
-   * @param nD The numDigits value to set.
+   * @param nD The numDigits value to set. (valid range 1 - 19)
    */
-   public void setNumber( int nD ){
-      if( nD < 20 )
+   public void setNumDigits( int nD ){
+      if( nD < 20  &&  nD > 0)
          this.numDigits = nD;
       else{
-         System.out.println( "The number of digits is larger than the maximum allowed value. " );
-         System.out.println( "It has been set to the default value: _____" );
+         this.numDigits = 19;
+         System.out.println( "The number of digits is outside the valid range (1 - 19 inclusive). " );
+         System.out.println( "It has been set to the default (maximum) value: 19" );
       }
-   }
+   }//end of method setNumDigits()
 
    /**
    * Getter method for the number var.
