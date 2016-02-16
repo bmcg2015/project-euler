@@ -53,11 +53,15 @@ public class AdjacentDigits{
 
    /**
    * Default constructor.
+   */
+   public AdjacentDigits(){
       //
    }
 
    /**
    * Argument based constructor.
+   * @param n The number to set.
+   * @param nD The numDigits to set. Valid range : 1 - 19 inclusive.
    */
    public AdjacentDigits( String n, int nD ){
       this.number = n;
