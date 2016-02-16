@@ -26,7 +26,6 @@
 * Find the thirteen adjacent digits in the 1000-digit number that have the greatest
 * product. What is the value of this product?
 * 
-* add param, return, etc to javadoc.
 * what is maximum of long var?
 * how many adjacent digits multiply to this? ie if all where 9.
 * use this as limit on setting numDigits. ie validation.
@@ -76,6 +75,7 @@ public class AdjacentDigits{
 
    /**
    * Setter method for the number var.
+   * @param n The number to set.
    */
    public void setNumber( String n ){
       this.number = n;
@@ -83,6 +83,7 @@ public class AdjacentDigits{
 
    /**
    * Getter method for the number var.
+   * @return The number var.
    */
    public String getNumber(){
       return number;
@@ -90,13 +91,20 @@ public class AdjacentDigits{
 
    /**
    * Setter method for the numDigits var.
+   * @param nD The numDigits value to set.
    */
    public void setNumber( int nD ){
-      this.numDigits = nD;
+      if( nD < 20 )
+         this.numDigits = nD;
+      else{
+         System.out.println( "The number of digits is larger than the maximum allowed value. " );
+         System.out.println( "It has been set to the default value: _____" );
+      }
    }
 
    /**
    * Getter method for the number var.
+   * @return The numDigits var.
    */
    public int getNumDigits(){
       return numDigits;
@@ -104,6 +112,7 @@ public class AdjacentDigits{
 
    /**
    * Getter method for the largestProduct var.
+   * @return The largestProduct var.
    */
    public long getLargestProduct(){
       return largestProduct;
@@ -125,13 +134,5 @@ public class AdjacentDigits{
       }
       System.out.println( largestProduct );
    }//end of method calculateProduct()
-
-
-
-
-
-
-
-
 
 }
