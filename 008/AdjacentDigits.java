@@ -25,17 +25,13 @@
 *      71636269561882670428252483600823257530420752963450
 * Find the thirteen adjacent digits in the 1000-digit number that have the greatest
 * product. What is the value of this product?
-* 
-* make notes on PE:
-* convert from String to int.
-* convert from char to int.
-* what (int)[char value] does.
 */
 
 /**
 * Holds the 1000 digit var as a String and contains methods to calculate the largest
 * product of adjacent digits.
-* The number of adjacent digits is stored as the private var 'number'
+* The number of adjacent digits is stored as the private var 'numDigits' and passed
+* to the class through the constructor or through the setNumDigits() method.
 * @author Brendan McGrath
 */
 public class AdjacentDigits{
