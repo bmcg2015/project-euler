@@ -1,0 +1,9 @@
+generalPE:
+In the generalPE package, should there be two overloaded methods for checking if an
+integer is a prime number? Is it slower to calculate isPrime( long ) rather than
+isPrime( int ) when passing an int argument? If it is not slower, then we do not need to
+keep the isPrime( int ) method. Is it just a memory consideration or is it also
+inefficient with respect to CPU usage?
+
+Is the algorithm for testing whether an integer is prime the most efficient available?
+Will there be much benefit of using a more efficient algorithm?
