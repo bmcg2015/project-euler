@@ -1,20 +1,20 @@
 package generalPE;
 /**
- * do i need an isPrime( long ) and an isPrime( int )?
- * ie is an isPrime( long ) slower than an isPrime( int ) if I pass an int to both?
+ * This package contains general methods for solving mathematical problems in the
+ * projecteuler.net problem set.
  */
 
 /**
- * 
- * @author bob
+ * Functionality for prime numbers.
+ * @author Brendan McGrath
  */
 public class Prime{
    
    /**
     * Checks whether the argument is a prime number. 
     * @param numToCheck Must be a positive integer (int variable).
-    * @return Returns false if the argument is <= 1, or if the argument
-    * is not a prime number. Returns true otherwise.
+    * @return Returns false if the argument is <= 1, or if the argument is not a prime
+    * number. Returns true otherwise.
     */
    public static boolean isPrime( int numToCheck ){
       if( numToCheck < 2 )
@@ -28,7 +28,7 @@ public class Prime{
             if( numToCheck % i == 0 )
                return false;
       return true;
-   }//end of method isPrime( int )
+   }// end of method isPrime( int )
 
    /**
     * Checks whether the argument is a prime number. 
@@ -48,6 +48,6 @@ public class Prime{
             if( numToCheck % i == 0 )
                return false;
       return true;
-   }//end of method isPrime( long )
+   }// end of method isPrime( long )
 
 }
